@@ -3,35 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>小明｜前端工程師新手之路</title>
+  <meta name="description" content="小明的前端工程師成長歷程與作品集，包含學習紀錄、專案展示與實作心得，打造具科技感的個人品牌網站。" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; max-width: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif; line-height: 1.6; }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { width: 1920px; margin: 0 auto; padding: 16px; }
-    nav a { margin-right: 12px; text-decoration: none; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .col-12 { grid-column: span 12; }
-    @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #e2e8f0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #38bdf8;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #22d3ee;
+      text-shadow: 0 0 6px #22d3ee;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 16px;
+      background: linear-gradient(90deg, #38bdf8, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      color: #cbd5f5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1440px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(56,189,248,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+    }
+
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
   </style>
 </head>
+
 <body>
-  <header class="container" role="banner">
-    <nav aria-label="主選單">
+
+  <header class="container">
+    <nav>
       <a href="#about">關於我</a>
       <a href="#projects">作品</a>
       <a href="https://example.com/blog">技術部落格</a>
       <a href="mailto:me@example.com">聯絡我</a>
     </nav>
+
     <h1>你好，我是小明：前端工程師新手之路</h1>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
+
+    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得，打造屬於自己的科技感品牌。</p>
   </header>
 
-  <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
+  <main class="container">
+    <section id="projects" class="grid">
+
+      <div class="card">
+        <h2>記帳系統</h2>
+        <p>使用圖表呈現支出比例，提升理財效率。</p>
+        <img src="https://source.unsplash.com/600x400/?finance,technology" alt="記帳系統介面展示" />
+      </div>
+
+      <div class="card">
+        <h2>ToDoList 工具</h2>
+        <p>支援排序與任務管理，提高工作效率。</p>
+        <img src="https://source.unsplash.com/600x400/?productivity,app" alt="待辦事項工具畫面" />
+      </div>
+
+      <div class="card">
+        <h2>番茄鐘應用</h2>
+        <p>結合專注與休息，提升學習與工作表現。</p>
+        <img src="https://source.unsplash.com/600x400/?timer,workspace" alt="番茄鐘應用介面" />
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>© 2026 小明 Portfolio · <a href="https://github.com">GitHub</a></p>
+    <img src="https://source.unsplash.com/1200x300/?technology,abstract" alt="科技抽象背景圖" />
   </footer>
+
 </body>
 </html>
